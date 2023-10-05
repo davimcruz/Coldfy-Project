@@ -1,11 +1,14 @@
-import React from 'react';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-function App() {
-  return (
-    <div className="Home">
-      <h1>Hello, World!</h1>
-    </div>
-  );
+function Index() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/pt-BR');
+  }, []);
+
+  return null;
 }
 
-export default App;
+export default Index;
