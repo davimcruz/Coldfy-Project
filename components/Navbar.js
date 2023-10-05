@@ -9,9 +9,9 @@ function Navbar() {
         </a>
       </div>
       <div className="navbar-menu">
-        <a href="/pagina1">Página 1</a>
-        <a href="/pagina2">Página 2</a>
-        <a href="/pagina3">Página 3</a>
+        <a href="/pagina1">Página </a>
+        <a href="/pagina2">Página </a>
+        <a href="/pagina3">Página </a>
       </div>
     </nav>
   );
