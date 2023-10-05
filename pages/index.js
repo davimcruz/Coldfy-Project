@@ -5,7 +5,7 @@ function Index() {
   const router = useRouter();
 
   useEffect(() => {
-    router.push('/pt-BR');
+    router.push('/desenvolvimento');
   }, []);
 
   return null;
