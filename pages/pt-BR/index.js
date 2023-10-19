@@ -1,12 +1,11 @@
-import Navbar from '../../components/Navbar';
+import Layout from "../../components/Layout/Layout";
 
-function Home() {
+function LandingPage() {
   return (
     <div>
-      <Navbar />
-      {/* Conteúdo da sua página */}
+      <Layout />
     </div>
   );
 }
 
-export default Home;
+export default LandingPage;

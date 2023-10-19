@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
                     content="width=device-width, initial-scale=1, shrink-to-fit=no"
                 />
                 <meta name="description" content="Sua Agência de Desenvolvimento de Softwares de confiança. Criamos soluções web personalizadas para atender às suas necessidades." />
-                <link rel="shortcut icon" href="/assets/favicon.png" />
+                <link rel="shortcut icon" href="/assets/logo/brackets (1).png" />
 
                 <title>Coldfy</title>
 
@@ -33,6 +33,11 @@ function MyApp({ Component, pageProps }) {
                 <meta name="mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+                <link href="https://fonts.googleapis.com" rel="preconnect"/>
+                <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
+
+
             </Head>
             <Component {...pageProps} />
         </>
