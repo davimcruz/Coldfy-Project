@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -61,14 +62,21 @@ const Hero = () => {
             </div>
           </div>
           <div className="hero-image-wrapper">
-            <motion.img
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="hero-image-v2"
-              src="/assets/icons/bsvg.svg"
-              style={{ width: "70%", marginLeft: "25%", fill: "#fff" }}
               transition={{ duration: 0.4 }}
-            />
+            >
+              <Image
+                src="/assets/icons/bsvg.svg"
+                alt="Coldfy Hero Brackets"
+                ppriority={true}
+                width={400} 
+                height={400} 
+                style={{ width: "70%", marginLeft: "25%", fill: "#fff" }}
+                className="hero-image-v2"
+              />
+            </motion.div>
           </div>
         </div>
       </div>
