@@ -1958,7 +1958,6 @@
           }
           function a() {
             typeof document < "u" &&
-              document.body.hasAttribute("data-tm-focus-within") &&
               NT.env.safari &&
               (document.addEventListener("mousedown", i, !0),
               document.addEventListener("mouseup", r, !0),
@@ -9495,7 +9494,6 @@
               (0, Xt.sessionInitialized)({
                 hasBoundaryNodes: !!document.querySelector(df),
                 reducedMotion:
-                  document.body.hasAttribute("data-tm-ix-vacation") &&
                   window.matchMedia("(prefers-reduced-motion)").matches,
               })
             ),
