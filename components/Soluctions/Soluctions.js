@@ -89,7 +89,7 @@ const Soluctions = () => {
 };
 
 const renderTool = (title, description, imageSrc) => (
-  <div role="listitem" className="w-dyn-item">
+  <div className="w-dyn-item">
     <a className="card tools-card w-inline-block">
       {imageSrc && (
         <Image

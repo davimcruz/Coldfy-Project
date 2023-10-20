@@ -1,9 +1,9 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-class MyDocument extends Document {
+class ColdfyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="pt-BR">
         <Head>
           <script
             src="https://kit.fontawesome.com/67e862033b.js"
@@ -25,4 +25,4 @@ class MyDocument extends Document {
   }
 }
 
-export default MyDocument;
+export default ColdfyDocument;
