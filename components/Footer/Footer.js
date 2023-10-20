@@ -48,23 +48,6 @@ const Footer = () => {
               Coldfy &copy; Copyright 2023 - Todos os Direitos Reservados.
             </div>
           </div>
-          <div className="social-media-wrapper">
-            <div className="fa-social-icon">
-              <a href="https://discord.com">
-                <i className="fab fa-discord"></i>
-              </a>
-            </div>
-            <div className="fa-social-icon">
-              <a href="https://instragram.com">
-                <i className="fab fa-instagram"></i>
-              </a>
-            </div>
-            <div className="fa-social-icon">
-              <a href="https://whatsapp.com">
-                <i className="fab fa-whatsapp"></i>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </motion.section>
