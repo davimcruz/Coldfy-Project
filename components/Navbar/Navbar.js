@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className="navbar w-nav">
       <div className="container navigation lp-container">
-        <a href="#" className="logo-brand-block w-nav-brand">
+        <a href="/" className="logo-brand-block w-nav-brand">
           <h4 className="display-2" style={{ color: "#fff" }}>
             Coldfy.com.br
           </h4>
@@ -42,7 +42,7 @@ const Navbar = () => {
                 className="nav-menu-item"
                 style={{ marginLeft: "10%", cursor: "pointer" }}
               >
-                <a href="#" className="button small nav-button w-nav-menu">
+                <a href="https://api.whatsapp.com/send?phone=SEU_NUMERO_DE_TELEFONE" className="button small nav-button w-nav-menu">
                   Whatsapp
                 </a>
               </li>
