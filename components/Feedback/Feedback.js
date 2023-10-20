@@ -1,5 +1,6 @@
 import { motion, useAnimation, useScroll } from "framer-motion";
 import { useEffect } from "react";
+import Image from "next/image";
 
 const useScrollAnimation = () => {
   const controls = useAnimation();
@@ -63,8 +64,11 @@ const Feedback = () => {
               <div className="card">
                 <div className="w-layout-hflex avatar-block">
                   <div className="avatar">
-                    <img
-                      src="https://pps.whatsapp.net/v/t61.24694-24/375881782_1108995397150045_4274546811527903524_n.jpg?ccb=11-4&oh=01_AdQj0OnIgYq0-gKwuzK5nLdVPWBiPqwZcBoORwaVB2Dviw&oe=6533AC7E&_nc_sid=000000&_nc_cat=110"
+                    <Image
+                      src="/assets/icons/davi.webp"
+                      alt="Avatar Images Coldfy"
+                      height={64}
+                      width={64}
                       className="avatar-image"
                     />
                   </div>
@@ -90,8 +94,11 @@ const Feedback = () => {
               <div className="card">
                 <div className="w-layout-hflex avatar-block">
                   <div className="avatar">
-                    <img
-                      src="https://pps.whatsapp.net/v/t61.24694-24/328152360_231552089600339_1027156331676838146_n.jpg?ccb=11-4&oh=01_AdSLEybNdVW4hrcFB9r18qezS77QJQ1DKP6Su7t5IJRnCQ&oe=653392C8&_nc_sid=000000&_nc_cat=106"
+                    <Image
+                      src="/assets/icons/fab.webp"
+                      alt="Avatar Images Spacelabs"
+                      height={64}
+                      width={64}
                       className="avatar-image"
                     />
                   </div>

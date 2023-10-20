@@ -1,5 +1,6 @@
 import { motion, useAnimation, useScroll } from "framer-motion";
 import { useEffect } from "react";
+import Image from "next/image";
 
 const Soluctions = () => {
   const controls = useAnimation();
@@ -64,22 +65,22 @@ const Soluctions = () => {
           {renderTool(
             "HTML",
             "Criamos a base da web com HTML, a linguagem que estrutura conteúdo online de forma eficaz e versátil",
-            "https://portfolio-rafael-souza.vercel.app/static/media/html.2ba4fabc69a89a8f71e6.png"
+            "/assets/icons/html.webp"
           )}
           {renderTool(
             "CSS",
             "Dê vida ao design com CSS, a linguagem que estiliza e embeleza websites com precisão e elegância",
-            "https://portfolio-rafael-souza.vercel.app/static/media/css.69a82c2d9e45c933a9cb.png"
+            "/assets/icons/css.webp"
           )}
           {renderTool(
             "Next.js",
             "Construímos interfaces incríveis com React, a biblioteca JavaScript que revoluciona o desenvolvimento de front-end",
-            "https://portfolio-rafael-souza.vercel.app/static/media/nextjs.48ddc8121a0fcb543d64.png"
+            "/assets/icons/next.webp"
           )}
           {renderTool(
             "JavaScript",
             "A linguagem essencial para tornar websites dinâmicos, proporcionando interações avançadas e funcionalidade única",
-            "https://portfolio-rafael-souza.vercel.app/static/media/javascript.1ccd6ef9bb1f9c84ef00.png"
+            "/assets/icons/js.webp"
           )}
         </div>
       </motion.div>
@@ -91,10 +92,11 @@ const renderTool = (title, description, imageSrc) => (
   <div role="listitem" className="w-dyn-item">
     <a className="card tools-card w-inline-block">
       {imageSrc && (
-        <img
-          alt=""
-          loading="lazy"
+        <Image
+          alt="Coldfy Web Tools"
           src={imageSrc}
+          width={64}
+          height={64} 
           className="tools-card---image tools-icon"
         />
       )}

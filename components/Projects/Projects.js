@@ -1,5 +1,6 @@
 import { motion, useAnimation, useScroll } from "framer-motion";
 import { useEffect } from "react";
+import Image from "next/image";
 
 const useScrollAnimation = () => {
   const controls = useAnimation();
@@ -60,15 +61,14 @@ const Projects = () => {
         <div className="w-dyn-list">
           <div role="list" className="three-grid w-dyn-items">
             {renderProject(
-              "/assets/websites/spacelabs.png",
+              "/assets/websites/spacelabs.webp",
               "Website",
               "10 de Outubro, 2023",
               "@SpaceLabs",
-              "Um site moderno para um Marketplace Gamer. Dashboards, pedidos e mais!",
-              "https://spacelabs.vercel.app/dashboard/overview"
+              "Um site moderno para um Marketplace Gamer. Dashboards, pedidos e mais!"
             )}
             {renderProject(
-              "/assets/icons/dev.png",
+              "/assets/icons/dev.webp",
               "?",
               "12 de Outubro, 2023",
               "Em Breve...",
@@ -76,7 +76,7 @@ const Projects = () => {
               null
             )}
             {renderProject(
-              "/assets/icons/dev.png",
+              "/assets/icons/dev.webp",
               "?",
               "14 de Outubro, 2023",
               "Em Breve...",
@@ -101,7 +101,13 @@ const renderProject = (
   <div role="listitem" className="w-dyn-item">
     <div className="card blog-card w-inline-block">
       <div className="blog-image-wrapper mg-bottom-12px">
-        <img alt="" loading="lazy" src={imageUrl} className="blog-image" />
+        <Image
+          src={imageUrl}
+          alt="Coldfy Projetcs Exibition Portfolio"
+          width={358}
+          height={256} 
+          className="blog-image"
+        />
       </div>
       <div className="blog-detail-wrapper">
         <div className="blog-category-tag">{category}</div>
