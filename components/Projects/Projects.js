@@ -50,7 +50,7 @@ const Projects = () => {
             <h2 className="display-2">
               Seleção Premium <i className="fas fa-crown"></i>
             </h2>
-            <h4>& Experiências Memoráveis</h4>
+            <h3>& Experiências Memoráveis</h3>
             <p style={{ fontWeight: 300 }}>
               Comprometida com a satisfação do cliente, garantimos resultados
               excepcionais em todos os aspectos. Conte com a nossa expertise
