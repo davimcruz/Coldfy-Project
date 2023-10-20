@@ -1697,7 +1697,7 @@ blockquote {
   width: 100%;
 }
 
-.card.blog-card:hover{
+.card.blog-card:hover {
   border-color: var(--primary-600);
 }
 
