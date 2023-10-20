@@ -70,7 +70,7 @@ const Hero = () => {
               <Image
                 src="/assets/icons/bsvg.svg"
                 alt="Coldfy Hero Brackets"
-                ppriority={true}
+                priority={true}
                 width={400} 
                 height={400} 
                 style={{ width: "70%", marginLeft: "25%", fill: "#fff" }}
