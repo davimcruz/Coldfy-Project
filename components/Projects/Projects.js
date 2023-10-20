@@ -1,75 +1,105 @@
-import React from "react";
+import { motion, useAnimation, useScroll } from "framer-motion";
+import { useEffect } from "react";
+
+const useScrollAnimation = () => {
+  const controls = useAnimation();
+  const { scrollY } = useScroll();
+
+  useEffect(() => {
+    const section = document.querySelector(".section");
+    if (!section) return;
+
+    const sectionTop = section.offsetTop;
+    const scrollTrigger = sectionTop - window.innerHeight / 2;
+
+    const onScroll = () => {
+      if (scrollY.get() > scrollTrigger) {
+        controls.start({
+          opacity: 1,
+          y: 0,
+          x: 0,
+          transition: { duration: 0.4, ease: "easeOut" },
+        });
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [scrollY, controls]);
+
+  return controls;
+};
 
 const Projects = () => {
+  const controls = useScrollAnimation();
+
   return (
-    <section className="section" style={{ marginTop: "-10%" }}>
+    <motion.section
+      className="section"
+      style={{ marginTop: "-10%" }}
+      initial={{ opacity: 0, y: -500, x: 0 }}
+      animate={controls}
+    >
       <div className="lp-layout-blockcontainer container lp-container">
         <div className="flex-wrapper---blog mg-bottom-64px">
           <div className="text-box _750px">
-            <h2 animation-id="h2h4SelectAnimation" className="display-2">
+            <h2 className="display-2">
               Seleção Premium <i className="fas fa-crown"></i>
             </h2>
-            <h4 animation-id="h2h4SelectAnimation">
-              & Experiências Memoráveis
-            </h4>
-            <p animation-id="pSelectAnimation" style={{ fontWeight: 300 }}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia illo
-              atque eveniet ea, deleniti culpa minima nemo pariatur cumque
-              provident porro possimus a enim molestiae aspernatur non
-              repudiandae. Itaque, architecto?
+            <h4>& Experiências Memoráveis</h4>
+            <p style={{ fontWeight: 300 }}>
+              Comprometida com a satisfação do cliente, garantimos resultados
+              excepcionais em todos os aspectos. Conte com a nossa expertise
+              para transformar suas ideias em realidade.
             </p>
           </div>
-          <a
-            animation-id="btnSelectAnimation"
-            className="button large secondary w-button"
-            href="#"
-          >
-            Todos os Projetos{" "}
-            <span>
-              <i
-                className="fas fa-long-arrow-right"
-                style={{ marginLeft: "0.5rem" }}
-              ></i>
-            </span>
-          </a>
         </div>
-        <div animation-id="cardSelectAnimation" className="w-dyn-list">
+        <div className="w-dyn-list">
           <div role="list" className="three-grid w-dyn-items">
             {renderProject(
-              "https://media.discordapp.net/attachments/1129968852021809223/1163832836822945792/image.png?ex=654102cb&is=652e8dcb&hm=419924647293c0c1ac73197bfa6725768005ea6c0296f39115a31fcd7cd2157b&=",
+              "/assets/websites/spacelabs.png",
               "Website",
               "10 de Outubro, 2023",
-              "@PalazeServidores",
-              "Um site moderno para uma Rede de Servidores (@PalazeServidores) que abrangem Mini-Games inovadores & divertidos!"
+              "@SpaceLabs",
+              "Um site moderno para um Marketplace Gamer. Dashboards, pedidos e mais!",
+              "https://spacelabs.vercel.app/dashboard/overview"
             )}
             {renderProject(
-              "https://media.discordapp.net/attachments/1129968852021809223/1163833367679213619/image.png?ex=65410349&is=652e8e49&hm=6e0bebcfe493dbd9fc29d6c15ede94f3478f24b26db3d4b06dca30eb8d7ea4d2&==",
-              "Website",
-              "10 de Outubro, 2023",
-              "@PixelmonBrasil",
-              "Um site moderno para uma Rede de Servidores (@PixelmonBrasil) que abrangem Mini-Games inovadores & divertidos!"
+              "/assets/icons/dev.png",
+              "?",
+              "12 de Outubro, 2023",
+              "Em Breve...",
+              "Futuramente estaremos adicionando novos projetos disponíveis ao público!",
+              null
             )}
             {renderProject(
-              "https://media.discordapp.net/attachments/1129968852021809223/1163833561305063425/image.png?ex=65410377&is=652e8e77&hm=50b20b45a798991016c7ce200a2e88f8422feefaed4b87745a2da62c27701f3a&=",
-              "Website",
-              "10 de Outubro, 2023",
-              "@PremiumHost",
-              "Site profissional para uma compânia de hospedagens brasileira, site com animações, efeitos & sistemas únicos!"
+              "/assets/icons/dev.png",
+              "?",
+              "14 de Outubro, 2023",
+              "Em Breve...",
+              "Futuramente estaremos adicionando novos projetos disponíveis ao público!",
+              null
             )}
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
-const renderProject = (imageUrl, category, date, title, description) => (
+const renderProject = (
+  imageUrl,
+  category,
+  date,
+  title,
+  description,
+  websiteUrl
+) => (
   <div role="listitem" className="w-dyn-item">
-    <a
-      animation-id="aSelectAnimation"
-      href="#"
-      className="card blog-card w-inline-block"
-    >
+    <div className="card blog-card w-inline-block">
       <div className="blog-image-wrapper mg-bottom-12px">
         <img alt="" loading="lazy" src={imageUrl} className="blog-image" />
       </div>
@@ -79,7 +109,12 @@ const renderProject = (imageUrl, category, date, title, description) => (
       </div>
       <h3 className="blog-card-title mg-bottom-12px">{title}</h3>
       <p>{description}</p>
-    </a>
+      {websiteUrl ? (
+        <a href={websiteUrl} className="button large secondary w-button">
+          Website
+        </a>
+      ) : null}
+    </div>
   </div>
 );
 

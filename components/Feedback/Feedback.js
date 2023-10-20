@@ -1,39 +1,66 @@
-import React from "react";
+import { motion, useAnimation, useScroll } from "framer-motion";
+import { useEffect } from "react";
+
+const useScrollAnimation = () => {
+  const controls = useAnimation();
+  const { scrollY } = useScroll();
+
+  useEffect(() => {
+    const section = document.querySelector(".section");
+    if (!section) return;
+
+    const sectionTop = section.offsetTop;
+    const scrollTrigger = sectionTop - window.innerHeight / 2;
+
+    const onScroll = () => {
+      if (scrollY.get() > scrollTrigger) {
+        controls.start({
+          opacity: 1,
+          y: 0,
+          x: 0,
+          transition: { duration: 0.5, ease: "easeOut" },
+        });
+      }
+    };
+
+    window.addEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [scrollY, controls]);
+
+  return controls;
+};
 
 const Feedback = () => {
+  const controls = useScrollAnimation();
   return (
-    <section className="section" style={{ marginTop: "-8%" }}>
+    <motion.section
+      className="section"
+      style={{ marginTop: "-8%" }}
+      initial={{ opacity: 0, y: 0, x: 2000 }}
+      animate={controls}
+    >
       <div className="lp-layout-blockcontainer container lp-container">
         <div className="feedMobile">
           <div>
-            <h2 animation-id="h2FeedbackAnimation">
+            <h2>
               Feedback de Sucesso <i className="fas fa-headphones"></i>
             </h2>
-            <p animation-id="pFeedbackAnimation">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
-              elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor
-              interdum nulla, ut
-              commodo diam libero vitae erat.
+            <p>
+              Feedbacks incríveis! Nossos clientes adoram nossa dedicação,
+              qualidade e compromisso. Veja o que estão dizendo sobre nossa
+              excelência.
             </p>
           </div>
         </div>
-        <br /><br />
-        <div data-delay="4000" data-animation="slide" className="testimonial-slider w-slider" data-autoplay="false"
-          data-easing="ease" data-hide-arrows="false" data-disable-swipe="false"
-          animation-id="pFeedbackAnimation2" data-autoplay-limit="0" data-nav-spacing="3"
-          data-duration="500" data-infinite="true">
+        <br />
+        <br />
+        <div className="testimonial-slider w-slider">
           <div className="testimonial-mask w-slider-mask">
             <div className="testimonial-slide w-slide">
               <div className="card">
-                <div className="display-4 dark">
-                  "Inovação e Qualidade Impecável"
-                </div>
-                <p className="paragraph small">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at
-                  purus ultrices, molestie quam ut, convallis ex. Etiam erat mi, bibendum nec velit sed, egestas maximus
-                  ex. Donec ullamcorper augue a lectus tincidunt convallis. Nunc vel risus est. Nunc id hendrerit elit, at
-                  tristique odio. Nunc eget lectus hendrerit."
-                </p>
                 <div className="w-layout-hflex avatar-block">
                   <div className="avatar">
                     <img
@@ -42,27 +69,25 @@ const Feedback = () => {
                     />
                   </div>
                   <div className="avatar-text-block">
-                    <div className="avatar-name">
-                      Davi M.
-                    </div>
-                    <div className="avatar-position">
-                      CEO @PalazeServidores
-                    </div>
+                    <div className="avatar-name">Davi M.</div>
+                    <div className="avatar-position">CEO @Coldfy</div>
                   </div>
                 </div>
+                <div className="display-4 white">
+                  "Comprometimento Com a Qualidade"
+                </div>
+                <p className="paragraph small">
+                  "Cada projeto que abraçamos é uma promessa de excelência,
+                  criatividade e inovação. Estamos dedicados a transformar
+                  ideias em experiências notáveis, proporcionando resultados que
+                  superam as expectativas. Não medimos esforços para garantir
+                  que cada projeto seja uma história de triunfo compartilhada
+                  entre nós."
+                </p>
               </div>
             </div>
             <div className="testimonial-slide w-slide">
               <div className="card">
-                <div className="display-4 dark">
-                  "Minha Visão em Realidade"
-                </div>
-                <p className="paragraph small">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at
-                  purus ultrices, molestie quam ut, convallis ex. Etiam erat mi, bibendum nec velit sed, egestas maximus
-                  ex. Donec ullamcorper augue a lectus tincidunt convallis. Nunc vel risus est. Nunc id hendrerit elit, at
-                  tristique odio. Nunc eget lectus hendrerit. Lorem ipsum dolor sit amet."
-                </p>
                 <div className="w-layout-hflex avatar-block">
                   <div className="avatar">
                     <img
@@ -71,32 +96,31 @@ const Feedback = () => {
                     />
                   </div>
                   <div className="avatar-text-block">
-                    <div className="avatar-name">
-                      Fabricio A.
-                    </div>
-                    <div className="avatar-position">
-                      CEO @PremiumHost
-                    </div>
+                    <div className="avatar-name">Fabricio A.</div>
+                    <div className="avatar-position">CEO @SpaceLabs</div>
                   </div>
                 </div>
+
+                <div className="display-4 white">
+                  "Minha Visão em Realidade"
+                </div>
+                <p className="paragraph small">
+                  "A Coldfy entregou um site que capturou perfeitamente minha
+                  visão. A equipe foi ágil, amigável e comprometida em oferecer
+                  qualidade excepcional. Recebo elogios constantes pelo design e
+                  funcionalidade do meu site. Estou profundamente agradecido
+                  pelo impacto positivo que isso teve nos meus negócios e na
+                  minha marca."
+                </p>
               </div>
             </div>
           </div>
-          <div className="slider-arrow-wrapper---testimonial left w-slider-arrow-left">
-            <div className="fa-icon-solid testimonial">
-              
-            </div>
-          </div>
-          <div className="slider-arrow-wrapper---testimonial w-slider-arrow-right">
-            <div className="fa-icon-solid testimonial">
-              
-            </div>
-          </div>
+
           <div className="display-hidden w-slider-nav w-round w-num"></div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
-}
+};
 
 export default Feedback;

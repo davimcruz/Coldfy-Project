@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -7,34 +8,66 @@ const Hero = () => {
         <div className="w-layout-grid _2-grid hero-v2">
           <div className="grid-column">
             <div>
-              <h1 animation-id="h1HeroAnimation" className="display-1 hero-v2">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                className="display-1 hero-v2"
+              >
                 Construindo Sucesso Online
-                <span style={{ fontSize: "28px" }}>, </span> Site a Site.{" "}
-                <i className="fas fa- " style={{ color: "#fff" }}></i>{" "}
-              </h1>
+                <motion.span
+                  style={{ fontSize: "28px" }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  ,{" "}
+                </motion.span>{" "}
+                Site a Site.{" "}
+                <motion.i
+                  style={{ color: "#fff" }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                ></motion.i>{" "}
+              </motion.h1>
             </div>
             <div>
-              <p animation-id="pHeroAnimation" className="paragraph large">
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.3 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="paragraph large"
+              >
                 Conectamos negócios ao mundo digital com nosso web design de
                 excelência e profundo conhecimento técnico. Oferecemos soluções
                 que transcendem as expectativas dos nossos clientes.
-              </p>
+              </motion.p>
             </div>
             <div
               animation-id="btnHeroAnimation"
               className="hero-button-wrapper"
             >
-              <a href="#" className="button w-button font-buttons ">
+              <motion.a
+                href="#"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.1 }} // Zoom suave ao passar o mouse
+                whileTap={{ scale: 0.9 }} // Efeito de clique (opcional)
+                className="button w-button font-buttons"
+                transition={{ duration: 0.2 }}
+              >
                 Fale Conosco
-              </a>
-
+              </motion.a>
             </div>
           </div>
           <div className="hero-image-wrapper">
-            <img
+            <motion.img
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
               className="hero-image-v2"
-              src="/assets/websites/example.png"
-              style={{ width: "100%", marginLeft: "25%" }}
+              src="/assets/icons/bsvg.svg"
+              style={{ width: "70%", marginLeft: "25%", fill: "#fff" }}
+              transition={{ duration: 0.4 }}
             />
           </div>
         </div>

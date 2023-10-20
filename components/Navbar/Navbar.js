@@ -1,60 +1,49 @@
 import React from "react";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
-
   return (
-    <div
-      data-animation="default"
-      data-collapse="medium"
-      data-duration="300"
-      data-easing="ease"
-      data-easing2="ease"
-      role="banner"
-      className="navbar w-nav"
-    >
+    <div className="navbar w-nav">
       <div className="container navigation lp-container">
         <a href="#" className="logo-brand-block w-nav-brand">
-          <h4 className="display-2" style={{ color: '#fff' }}>
-            Coldfy
+          <h4 className="display-2" style={{ color: "#fff" }}>
+            Coldfy.com.br
           </h4>
         </a>
 
         <div className="nav-content-wrapper right-aligned">
           <nav role="navigation" className="menu-content w-nav-menu">
             <ul role="list" className="nav-menu-list w-list-unstyled">
-              <li className="nav-menu-item">
-                <a href="#" className="navlink w-nav-link">
-                  Casa
-                </a>
+              <li className="nav-menu-item" style={{ cursor: "pointer" }}>
+                <Link to="hero" smooth={true} duration={500}>
+                  Home
+                </Link>
               </li>
 
-              <li className="nav-menu-item">
-                <a href="#" className="navlink w-nav-link">
-                  Sobre
-                </a>
+              <li className="nav-menu-item" style={{ cursor: "pointer" }}>
+                <Link to="soluctions" smooth={true} duration={500}>
+                  Soluções
+                </Link>
               </li>
 
-              <li className="nav-menu-item">
-                <a href="#" className="navlink w-nav-link">
+              <li className="nav-menu-item" style={{ cursor: "pointer" }}>
+                <Link to="projects" smooth={true} duration={500}>
                   Projetos
-                </a>
+                </Link>
               </li>
 
-              <li className="nav-menu-item">
-                <a href="#" className="navlink w-nav-link">
-                  FAQ
-                </a>
+              <li className="nav-menu-item" style={{ cursor: "pointer" }}>
+                <Link to="feedback" smooth={true} duration={500}>
+                  Feedback
+                </Link>
               </li>
 
-              <li className="nav-menu-item ">
-                <a href="#" className="navlink w-nav-link ">
-                  Contato
-                </a>
-              </li>
-
-              <li className="nav-menu-item" style={{ marginLeft: '10%' }}>
+              <li
+                className="nav-menu-item"
+                style={{ marginLeft: "10%", cursor: "pointer" }}
+              >
                 <a href="#" className="button small nav-button w-nav-menu">
-                  Comunidade
+                  Whatsapp
                 </a>
               </li>
             </ul>
