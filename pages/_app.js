@@ -40,10 +40,6 @@ function MyApp({ Component, pageProps }) {
 
             </Head>
             <Component {...pageProps} />
-            <script
-            src="/javascript/Animations.js"
-            crossorigin="anonymous"
-          ></script>
         </>
     );
 }
