@@ -109,11 +109,6 @@ const renderProject = (
       </div>
       <h3 className="blog-card-title mg-bottom-12px">{title}</h3>
       <p>{description}</p>
-      {websiteUrl ? (
-        <a href={websiteUrl} className="button large secondary w-button">
-          Website
-        </a>
-      ) : null}
     </div>
   </div>
 );
