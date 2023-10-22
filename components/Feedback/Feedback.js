@@ -65,7 +65,7 @@ const Feedback = () => {
                 <div className="w-layout-hflex avatar-block">
                   <div className="avatar">
                     <Image
-                      src="/assets/icons/profile-1.svg"
+                      src="/assets/icons/profile-1.webp"
                       alt="Avatar Images Profile 1"
                       height={64}
                       width={64}
@@ -96,7 +96,7 @@ const Feedback = () => {
                 <div className="w-layout-hflex avatar-block">
                   <div className="avatar">
                     <Image
-                      src="/assets/icons/profile-2.svg"
+                      src="/assets/icons/profile-2.webp"
                       alt="Avatar Images Profile 2"
                       height={64}
                       width={64}
@@ -129,7 +129,7 @@ const Feedback = () => {
                 <div className="w-layout-hflex avatar-block">
                   <div className="avatar">
                     <Image
-                      src="/assets/icons/profile-3.svg"
+                      src="/assets/icons/profile-3.webp"
                       alt="Avatar Images Profile 3"
                       height={64}
                       width={64}
@@ -155,7 +155,7 @@ const Feedback = () => {
                 <div className="w-layout-hflex avatar-block">
                   <div className="avatar">
                     <Image
-                      src="/assets/icons/profile-4.svg"
+                      src="/assets/icons/profile-4.webp"
                       alt="Avatar Images Profile 4"
                       height={64}
                       width={64}
