@@ -65,7 +65,7 @@ const Feedback = () => {
                 <div className="w-layout-hflex avatar-block">
                   <div className="avatar">
                     <Image
-                      src="/assets/icons/davi.webp"
+                      src="/assets/icons/profile-1.webp"
                       alt="Avatar Images Coldfy"
                       height={64}
                       width={64}
@@ -95,7 +95,7 @@ const Feedback = () => {
                 <div className="w-layout-hflex avatar-block">
                   <div className="avatar">
                     <Image
-                      src="/assets/icons/fab.webp"
+                      src="/assets/icons/profile-2.webp"
                       alt="Avatar Images Spacelabs"
                       height={64}
                       width={64}

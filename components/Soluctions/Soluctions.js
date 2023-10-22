@@ -63,16 +63,6 @@ const Soluctions = () => {
       >
         <div className="tools-slider-wrapper">
           {renderTool(
-            "HTML",
-            "Criamos a base da web com HTML, a linguagem que estrutura conteúdo online de forma eficaz e versátil",
-            "/assets/icons/html.webp"
-          )}
-          {renderTool(
-            "CSS",
-            "Dê vida ao design com CSS, a linguagem que estiliza e embeleza websites com precisão e elegância",
-            "/assets/icons/css.webp"
-          )}
-          {renderTool(
             "Next.js",
             "Construímos interfaces incríveis com React, a biblioteca JavaScript que revoluciona o desenvolvimento de front-end",
             "/assets/icons/next.webp"
@@ -81,6 +71,16 @@ const Soluctions = () => {
             "JavaScript",
             "A linguagem essencial para tornar websites dinâmicos, proporcionando interações avançadas e funcionalidade única",
             "/assets/icons/js.webp"
+          )}
+          {renderTool(
+            "HTML",
+            "Criamos a base da web com HTML, a linguagem que estrutura conteúdo online de forma eficaz e versátil",
+            "/assets/icons/html.webp"
+          )}
+          {renderTool(
+            "CSS",
+            "Dê vida ao design com CSS, a linguagem que estiliza e embeleza websites com precisão e elegância",
+            "/assets/icons/css.webp"
           )}
         </div>
       </motion.div>
@@ -96,7 +96,7 @@ const renderTool = (title, description, imageSrc) => (
           alt="Coldfy Web Tools"
           src={imageSrc}
           width={64}
-          height={64} 
+          height={64}
           className="tools-card---image tools-icon"
         />
       )}

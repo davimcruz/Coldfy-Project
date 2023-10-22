@@ -59,28 +59,29 @@ const Projects = () => {
           </div>
         </div>
         <div className="w-dyn-list">
-          <div role="list" className="three-grid w-dyn-items">
+          <div className="three-grid w-dyn-items">
             {renderProject(
-              "/assets/websites/spacelabs.webp",
+              "/assets/websites/spacelabs.svg",
               "Website",
               "10 de Outubro, 2023",
               "@SpaceLabs",
-              "Um site moderno para um Marketplace Gamer. Dashboards, pedidos e mais!"
+              "Um site moderno para um Marketplace para a comunidade gamer. Dashboards, pedidos, perfis, e muito mais!",
+              "https://spacelabs.vercel.app"
             )}
             {renderProject(
-              "/assets/icons/dev.webp",
-              "?",
+              "/assets/websites/pagamuito.svg",
+              "Website Mobile",
               "12 de Outubro, 2023",
-              "Em Breve...",
-              "Futuramente estaremos adicionando novos projetos disponíveis ao público!",
-              null
+              "@PagaMuito.app",
+              "WebApp mobile desenvolvido para organização de comunidade, central de notificações e mais!",
+              "https://pagamuito.app"
             )}
             {renderProject(
-              "/assets/icons/dev.webp",
-              "?",
+              "/assets/websites/gymcontrol.svg",
+              "Website Mobile",
               "14 de Outubro, 2023",
-              "Em Breve...",
-              "Futuramente estaremos adicionando novos projetos disponíveis ao público!",
+              "@GymControl",
+              "WebApp mobile desenvolvido como solução para Academias. Controle de frequência, pontuações, fichas e mais!",
               null
             )}
           </div>
@@ -90,33 +91,28 @@ const Projects = () => {
   );
 };
 
-const renderProject = (
-  imageUrl,
-  category,
-  date,
-  title,
-  description,
-  websiteUrl
-) => (
-  <div role="listitem" className="w-dyn-item">
-    <div className="card blog-card w-inline-block">
-      <div className="blog-image-wrapper mg-bottom-12px">
-        <Image
-          src={imageUrl}
-          alt="Coldfy Projetcs Exibition Portfolio"
-          width={358}
-          height={256} 
-          className="blog-image"
-        />
+const renderProject = (imageUrl, category, date, title, description, href) => (
+  <a href={href} target="_blank" rel="noopener noreferrer">
+    <div className="w-dyn-item">
+      <div className="card blog-card w-inline-block">
+        <div className="blog-image-wrapper mg-bottom-12px">
+          <Image
+            src={imageUrl}
+            alt="Coldfy Projetcs Exhibition Portfolio"
+            width={358}
+            height={256}
+            className="blog-image"
+          />
+        </div>
+        <div className="blog-detail-wrapper">
+          <div className="blog-category-tag">{category}</div>
+          <div className="blog-date">{date}</div>
+        </div>
+        <h3 className="blog-card-title mg-bottom-12px">{title}</h3>
+        <p>{description}</p>
       </div>
-      <div className="blog-detail-wrapper">
-        <div className="blog-category-tag">{category}</div>
-        <div className="blog-date">{date}</div>
-      </div>
-      <h3 className="blog-card-title mg-bottom-12px">{title}</h3>
-      <p>{description}</p>
     </div>
-  </div>
+  </a>
 );
 
 export default Projects;

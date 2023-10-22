@@ -1,15 +1,12 @@
 import React from "react";
 import { Link, Element } from "react-scroll";
-import Navbar from "../../components/Navbar/Navbar";
-import Hero from "../../components/Hero/Hero";
-import Soluctions from "../../components/Soluctions/Soluctions";
-
-import Services from "../../components/ColdfyServices/Services"; //Futuramente adicionar
-
-import Projects from "../../components/Projects/Projects";
-import Feedback from "../../components/Feedback/Feedback";
-import Community from "../../components/Community/Community";
-import Footer from "../../components/Footer/Footer";
+import Navbar from "../Navbar/Navbar";
+import Hero from "../Hero/Hero";
+import Soluctions from "../Soluctions/Soluctions";
+import Projects from "../Projects/Projects";
+import Feedback from "../Feedback/Feedback";
+import Community from "../Community/Community";
+import Footer from "../Footer/Footer";
 
 const Layout = () => {
   return (

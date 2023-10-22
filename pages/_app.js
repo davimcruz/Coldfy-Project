@@ -1,4 +1,6 @@
 import "../styles/globals.css";
+import React from 'react';
+import { Link, Element, Events, animateScroll as scroll, scroller } from 'react-scroll';
 
 import Head from "next/head";
 

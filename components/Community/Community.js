@@ -42,12 +42,11 @@ const Community = () => {
       animate={controls}
     >
       <div
-        animation-id="communityAnimation"
         className="lp-layout-blockcontainer container lp-container"
       >
         <div className="card large cta">
           <h2 className="display-3 mg-bottom-0px">
-            Especial, Único & Inovador. Entre na Comunidade.{" "}
+            Especial, Único & Inovador. Venha fazer parte também.{" "}
             <i className="fas fa-bullseye"></i>{" "}
           </h2>
           <div className="grid-column" style={{ marginLeft: "50%" }}>

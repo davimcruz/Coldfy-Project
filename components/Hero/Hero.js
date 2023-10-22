@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="section hero v1">
+    <section className="section hero v3">
       <div className="lp-layout-blockcontainer container lp-container">
         <div className="w-layout-grid _2-grid hero-v2">
           <div className="grid-column">
@@ -45,17 +45,17 @@ const Hero = () => {
               </motion.p>
             </div>
             <div
-              animation-id="btnHeroAnimation"
               className="hero-button-wrapper"
             >
               <motion.a
-                href="#"
+                href="https://api.whatsapp.com/send?phone=62982166830"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 whileHover={{ scale: 1.1 }} // Zoom suave ao passar o mouse
                 whileTap={{ scale: 0.9 }} // Efeito de clique (opcional)
                 className="button w-button font-buttons"
                 transition={{ duration: 0.2 }}
+                style={{marginTop: "15px"}}
               >
                 Fale Conosco
               </motion.a>

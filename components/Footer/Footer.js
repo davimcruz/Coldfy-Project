@@ -38,6 +38,7 @@ const Footer = () => {
   return (
     <motion.section
       className="section footer"
+      style={{justifyContent: "center", display: "flex"}}
       initial={{ opacity: 0, y: 5000, x: 0 }}
       animate={controls}
     >
