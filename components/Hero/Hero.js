@@ -40,7 +40,7 @@ const Hero = () => {
                 className="paragraph large"
               >
                 Conectamos negócios ao mundo digital com nosso web design de
-                excelência e profundo conhecimento técnico. Oferecemos soluções
+                excelência e profundo conhecimento técnico. <br/> Oferecemos soluções
                 que transcendem as expectativas dos nossos clientes.
               </motion.p>
             </div>
