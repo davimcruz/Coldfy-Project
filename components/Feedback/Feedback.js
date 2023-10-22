@@ -65,8 +65,8 @@ const Feedback = () => {
                 <div className="w-layout-hflex avatar-block">
                   <div className="avatar">
                     <Image
-                      src="/assets/icons/profile-1.webp"
-                      alt="Avatar Images Coldfy"
+                      src="/assets/icons/profile-1.svg"
+                      alt="Avatar Images Profile 1"
                       height={64}
                       width={64}
                       className="avatar-image"
@@ -74,7 +74,7 @@ const Feedback = () => {
                   </div>
                   <div className="avatar-text-block">
                     <div className="avatar-name">Davi M.</div>
-                    <div className="avatar-position">CEO @Coldfy</div>
+                    <div className="avatar-position">@Coldfy</div>
                   </div>
                 </div>
                 <div className="display-4 white">
@@ -90,13 +90,14 @@ const Feedback = () => {
                 </p>
               </div>
             </div>
+
             <div className="testimonial-slide w-slide">
               <div className="card">
                 <div className="w-layout-hflex avatar-block">
                   <div className="avatar">
                     <Image
-                      src="/assets/icons/profile-2.webp"
-                      alt="Avatar Images Spacelabs"
+                      src="/assets/icons/profile-2.svg"
+                      alt="Avatar Images Profile 2"
                       height={64}
                       width={64}
                       className="avatar-image"
@@ -104,10 +105,9 @@ const Feedback = () => {
                   </div>
                   <div className="avatar-text-block">
                     <div className="avatar-name">Fabricio A.</div>
-                    <div className="avatar-position">CEO @SpaceLabs</div>
+                    <div className="avatar-position">@SpaceLabs</div>
                   </div>
                 </div>
-
                 <div className="display-4 white">
                   "Minha Visão em Realidade"
                 </div>
@@ -123,7 +123,59 @@ const Feedback = () => {
             </div>
           </div>
 
-          <div className="display-hidden w-slider-nav w-round w-num"></div>
+          <div className="testimonial-mask w-slider-mask" style={{marginTop: "50px"}}>
+            <div className="testimonial-slide w-slide">
+              <div className="card">
+                <div className="w-layout-hflex avatar-block">
+                  <div className="avatar">
+                    <Image
+                      src="/assets/icons/profile-3.svg"
+                      alt="Avatar Images Profile 3"
+                      height={64}
+                      width={64}
+                      className="avatar-image"
+                    />
+                  </div>
+                  <div className="avatar-text-block">
+                    <div className="avatar-name">Maria S.</div>
+                    <div className="avatar-position">@GymControl</div>
+                  </div>
+                </div>
+                <div className="display-4 white">
+                  "Experiência Incrível"
+                </div>
+                <p className="paragraph small">
+                  "A Coldfy superou todas as minhas expectativas. Eles transformaram nossa visão em realidade com um design moderno e funcional. Estou muito feliz com os resultados e agradeço à equipe pela dedicação e comprometimento em entregar um projeto excepcional."
+                </p>
+              </div>
+            </div>
+
+            <div className="testimonial-slide w-slide">
+              <div className="card">
+                <div className="w-layout-hflex avatar-block">
+                  <div className="avatar">
+                    <Image
+                      src="/assets/icons/profile-4.svg"
+                      alt="Avatar Images Profile 4"
+                      height={64}
+                      width={64}
+                      className="avatar-image"
+                    />
+                  </div>
+                  <div className="avatar-text-block">
+                    <div className="avatar-name">João P.</div>
+                    <div className="avatar-position">@PagaMuito</div>
+                  </div>
+                </div>
+                <div className="display-4 white">
+                  "Qualidade Inigualável"
+                </div>
+                <p className="paragraph small">
+                  "A Coldfy é a escolha certa quando se trata de qualidade. Eles entregaram um projeto excepcional que superou nossas expectativas em todos os aspectos. Estamos extremamente satisfeitos com o resultado final e recomendamos seus serviços a todos."
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </motion.section>

@@ -9,6 +9,7 @@ html {
   display: flex;
   justify-content: center;
   scroll-behavior: smooth;
+  user-select: none;
 }
 
 ::-webkit-scrollbar {
@@ -1715,6 +1716,10 @@ blockquote {
   margin-left: 24px;
 }
 
+.button.small.nav-button:hover {
+  transform: scale(0.9);
+}
+
 
 .button.full-width {
   width: 100%;
@@ -1813,13 +1818,13 @@ blockquote {
 
 /* Container */
 
+/* Estilos padrão para todos os dispositivos */
 .container {
-  max-width: 1314px;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 24px;
   padding-right: 24px;
 }
+
+
 
 .container.navigation {
   align-items: center;
@@ -1991,4 +1996,20 @@ blockquote {
 
 .bg-a2::after {
   animation: animateAfter 7s cubic-bezier(0.47, 0, 0.745, 0.715) infinite;
+}
+
+
+
+@media (min-width: 769px) {
+  .container {
+    max-width: 1314px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
 }

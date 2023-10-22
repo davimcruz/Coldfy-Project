@@ -72,7 +72,7 @@ const Projects = () => {
               "/assets/websites/pagamuito.svg",
               "Website Mobile",
               "12 de Outubro, 2023",
-              "@PagaMuito.app",
+              "@PagaMuito",
               "WebApp mobile desenvolvido para organização de comunidade, central de notificações e mais!",
               "https://pagamuito.app"
             )}

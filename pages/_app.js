@@ -3,7 +3,7 @@ import React from "react";
 
 import Head from "next/head";
 
-function MyApp({ Component, pageProps }) {
+function ColdfyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
@@ -58,4 +58,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
+export default ColdfyApp;
