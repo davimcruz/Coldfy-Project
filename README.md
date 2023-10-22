@@ -3,7 +3,7 @@
 
 - Next.js v13
 - Vercel Hosted
-- Componentes por categoria
-- Layout para carregamento do DOM
-- Melhorias nas rotas padrões
+- Componentes por categoria (Animados com Biblioteca Motion (React))
+- SEO e Entrega de Pacotes otimizada
+- Rotas dinâmicas
 
