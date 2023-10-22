@@ -2013,3 +2013,14 @@ blockquote {
     display: none;
   }
 }
+
+
+.mobile-text {
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+}

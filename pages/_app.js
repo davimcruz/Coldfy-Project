@@ -50,7 +50,7 @@ function ColdfyApp({ Component, pageProps }) {
         <link
           href="https://fonts.gstatic.com"
           rel="preconnect"
-          crossorigin="anonymous"
+          crossOrigin="anonymous"
         />
       </Head>
       <Component {...pageProps} />
