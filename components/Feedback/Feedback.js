@@ -51,8 +51,8 @@ const Feedback = () => {
             </h2>
             <p>
               Feedbacks incríveis! Nossos clientes adoram nossa dedicação,
-              qualidade e compromisso. Veja o que estão dizendo sobre nossa
-              excelência.
+              qualidade e compromisso. <br /> Veja o que estão dizendo sobre
+              nossa excelência.
             </p>
           </div>
         </div>

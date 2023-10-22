@@ -52,9 +52,9 @@ const Projects = () => {
             </h2>
             <h3>& Experiências Memoráveis</h3>
             <p style={{ fontWeight: 300 }}>
-              Comprometida com a satisfação do cliente, garantimos resultados
-              excepcionais em todos os aspectos. Conte com a nossa expertise
-              para transformar suas ideias em realidade.
+              Comprometidos com a satisfação do cliente, garantimos resultados
+              excepcionais em todos os aspectos. <br /> Conte com a nossa
+              expertise para transformar suas ideias em realidade.
             </p>
           </div>
         </div>

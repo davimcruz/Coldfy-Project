@@ -46,9 +46,9 @@ const Soluctions = () => {
           <div>
             <p animation-id="pSolutionAnimation">
               Explore nosso impressionante conjunto de ferramentas inovadoras e
-              eficazes, incluindo muito mais. Essas tecnologias de ponta estão à
-              disposição para impulsionar o sucesso dos seus projetos e garantir
-              resultados excepcionais.
+              eficazes, incluindo muito mais. <br /> Essas tecnologias de ponta
+              estão à disposição para impulsionar o sucesso dos seus projetos e
+              garantir resultados excepcionais.
             </p>
           </div>
         </div>

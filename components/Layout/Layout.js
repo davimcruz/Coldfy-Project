@@ -1,5 +1,7 @@
 import React from "react";
-import { Link, Element } from "react-scroll";
+import { Element } from "react-scroll";
+import Background from "../Background/Background";
+import Background2 from "../Background/Background2";
 import Navbar from "../Navbar/Navbar";
 import Hero from "../Hero/Hero";
 import Soluctions from "../Soluctions/Soluctions";
@@ -11,6 +13,7 @@ import Footer from "../Footer/Footer";
 const Layout = () => {
   return (
     <div>
+      <Background />
       <Navbar />
       <Element name="hero">
         <Hero />
@@ -28,6 +31,7 @@ const Layout = () => {
         <Community />
       </Element>
       <Footer />
+      <Background2 />
     </div>
   );
 };
