@@ -30,6 +30,9 @@ function ColdfyApp({ Component, pageProps }) {
         />
         <meta property="og:url" content="https://coldfy.com.br" />
         <meta property="og:type" content="website" />
+        <meta property="og:image" content="/assets/logo/brackets.png" />
+
+        <meta name="theme-color" content="#0c0c13" />
 
         <meta name="copyright" content="Copyright © Coldfy 2023" />
 
@@ -45,6 +48,26 @@ function ColdfyApp({ Component, pageProps }) {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+        <meta http-equiv="Content-Language" content="pt-BR" />
+        <meta name="language" content="Portuguese" />
+
+        <meta name="author" content="Coldfy" />
+        <meta name="publisher" content="Coldfy" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:site" content="@Coldfy" />
+        <meta property="twitter:creator" content="@Coldfy" />
+
+        <meta name="geo.region" content="BR-SP" />
+        <meta name="geo.placename" content="São Paulo" />
+
+        <meta
+          rel="alternate"
+          hreflang="x-default"
+          href="https://coldfy.com.br/"
+        />
+        <meta rel="alternate" hreflang="pt-BR" href="https://coldfy.com.br/" />
 
         <link href="https://fonts.googleapis.com" rel="preconnect" />
         <link
