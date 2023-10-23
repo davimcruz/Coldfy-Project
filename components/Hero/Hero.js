@@ -40,13 +40,11 @@ const Hero = () => {
                 className="paragraph large"
               >
                 Conectamos negócios ao mundo digital com nosso web design de
-                excelência e profundo conhecimento técnico. <br/> Oferecemos soluções
-                que transcendem as expectativas dos nossos clientes.
+                excelência e profundo conhecimento técnico. <br /> Oferecemos
+                soluções que transcendem as expectativas dos nossos clientes.
               </motion.p>
             </div>
-            <div
-              className="hero-button-wrapper"
-            >
+            <div className="hero-button-wrapper">
               <motion.a
                 href="https://api.whatsapp.com/send?phone=62982166830"
                 initial={{ opacity: 0, y: -20 }}
@@ -55,7 +53,7 @@ const Hero = () => {
                 whileTap={{ scale: 0.9 }} // Efeito de clique (opcional)
                 className="button w-button font-buttons"
                 transition={{ duration: 0.2 }}
-                style={{marginTop: "15px"}}
+                style={{ marginTop: "15px" }}
               >
                 Fale Conosco
               </motion.a>
@@ -63,17 +61,21 @@ const Hero = () => {
           </div>
           <div className="hero-image-wrapper">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4 }}
+              initial={{ opacity: 1, x: -5, y: -20 }}
+              animate={{ x: 5, y: 20 }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "reverse",
+                duration: 2,
+              }}
             >
               <Image
                 src="/assets/icons/bsvg.svg"
                 alt="Coldfy Hero Brackets"
                 priority={true}
-                width={400} 
-                height={400} 
-                style={{ width: "70%", marginLeft: "25%", fill: "#fff" }}
+                width={400}
+                height={400}
+                style={{ width: "90%", marginLeft: "25%", fill: "#fff" }}
                 className="hero-image-v2"
               />
             </motion.div>
