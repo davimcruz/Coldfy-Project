@@ -38,7 +38,7 @@ function ColdfyApp({ Component, pageProps }) {
 
         <meta
           name="keywords"
-          content="agência de desenvolvimento web, programação, sites personalizados, soluções web, desenvolvimento de aplicativos"
+          content="agência de desenvolvimento web, programação, sites personalizados, soluções web, desenvolvimento de aplicativos, cold, coldfya, coldfy.com.br"
         />
 
         <link rel="canonical" href="https://coldfy.com.br" />
