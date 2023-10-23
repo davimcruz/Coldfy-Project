@@ -38,7 +38,7 @@ const Navbar = () => {
             <nav role="navigation" className="menu-content w-nav-menu">
               <ul className="nav-menu-list w-list-unstyled">
                 <li className="nav-menu-item" style={{ cursor: "pointer" }}>
-                  <Link href="/"  o="hero" smooth={true} duration={500}>
+                  <Link href="/" o="hero" smooth={true} duration={500}>
                     Home
                   </Link>
                 </li>
@@ -61,10 +61,7 @@ const Navbar = () => {
                   </Link>
                 </li>
 
-                <li
-                  className="nav-menu-item"
-                  style={{ marginLeft: "10%", cursor: "pointer" }}
-                >
+                <li className="nav-menu-item" style={{ cursor: "pointer" }}>
                   <motion.a
                     href="https://api.whatsapp.com/send?phone=62982166830"
                     initial={{ opacity: 0, y: -20 }}
@@ -79,14 +76,6 @@ const Navbar = () => {
                 </li>
               </ul>
             </nav>
-
-            <div className="menu-icon-block w-nav-button">
-              <div animation-id="navMobileAnimation" className="nav-icon">
-                <div className="top-line"></div>
-                <div className="middle-line"></div>
-                <div className="bottom-line"></div>
-              </div>
-            </div>
           </div>
         </div>
       </motion.div>

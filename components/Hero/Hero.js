@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Keyboard from "./ImageHero";
 
 const Hero = () => {
   return (
@@ -61,23 +62,15 @@ const Hero = () => {
           </div>
           <div className="hero-image-wrapper">
             <motion.div
-              initial={{ opacity: 1, x: -5, y: -20 }}
+              initial={{ opacity: 1, x: -5, y: 0 }}
               animate={{ x: 5, y: 20 }}
               transition={{
                 repeat: Infinity,
                 repeatType: "reverse",
-                duration: 2,
+                duration: 3,
               }}
             >
-              <Image
-                src="/assets/icons/bsvg.svg"
-                alt="Coldfy Hero Brackets"
-                priority={true}
-                width={400}
-                height={400}
-                style={{ width: "90%", marginLeft: "25%", fill: "#fff" }}
-                className="hero-image-v2"
-              />
+              <Keyboard />
             </motion.div>
           </div>
         </div>
