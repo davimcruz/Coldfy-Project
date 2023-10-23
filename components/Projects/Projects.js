@@ -82,7 +82,7 @@ const Projects = () => {
               "14 de Outubro, 2023",
               "@GymControl",
               "WebApp mobile desenvolvido como solução para Academias. Controle de frequência, pontuações, fichas e mais!",
-              null
+              "https://coldfy.com.br"
             )}
           </div>
         </div>

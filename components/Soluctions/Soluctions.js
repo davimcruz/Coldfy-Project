@@ -90,7 +90,7 @@ const Soluctions = () => {
 
 const renderTool = (title, description, imageSrc) => (
   <div className="w-dyn-item">
-    <a className="card tools-card w-inline-block">
+    <a href="/" className="card tools-card w-inline-block">
       {imageSrc && (
         <Image
           alt="Coldfy Web Tools"

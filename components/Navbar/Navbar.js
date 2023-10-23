@@ -38,25 +38,25 @@ const Navbar = () => {
             <nav role="navigation" className="menu-content w-nav-menu">
               <ul className="nav-menu-list w-list-unstyled">
                 <li className="nav-menu-item" style={{ cursor: "pointer" }}>
-                  <Link to="hero" smooth={true} duration={500}>
+                  <Link href="/"  o="hero" smooth={true} duration={500}>
                     Home
                   </Link>
                 </li>
 
                 <li className="nav-menu-item" style={{ cursor: "pointer" }}>
-                  <Link to="soluctions" smooth={true} duration={500}>
+                  <Link href="/" to="soluctions" smooth={true} duration={500}>
                     Soluções
                   </Link>
                 </li>
 
                 <li className="nav-menu-item" style={{ cursor: "pointer" }}>
-                  <Link to="projects" smooth={true} duration={500}>
+                  <Link href="/" to="projects" smooth={true} duration={500}>
                     Projetos
                   </Link>
                 </li>
 
                 <li className="nav-menu-item" style={{ cursor: "pointer" }}>
-                  <Link to="feedback" smooth={true} duration={500}>
+                  <Link href="/" to="feedback" smooth={true} duration={500}>
                     Feedback
                   </Link>
                 </li>
