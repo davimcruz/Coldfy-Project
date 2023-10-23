@@ -30,7 +30,7 @@ function ColdfyApp({ Component, pageProps }) {
         />
         <meta property="og:url" content="https://coldfy.com.br" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/assets/logo/brackets.png" />
+        <meta property="og:image" content="/assets/logo/og.svg" />
 
         <meta name="theme-color" content="#0c0c13" />
 
