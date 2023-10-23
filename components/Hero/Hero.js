@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Keyboard from "./ImageHero";
 
 const Hero = () => {
   return (
@@ -71,8 +70,8 @@ const Hero = () => {
               }}
             >
               <Image
-                src="/assets/icons/bsvg.svg"
-                alt="Coldfy Hero Brackets"
+                src="/assets/icons/keyboard.svg"
+                alt="Coldfy Hero Keyboard"
                 priority={true}
                 width={400}
                 height={400}
